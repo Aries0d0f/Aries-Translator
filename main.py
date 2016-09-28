@@ -5,7 +5,7 @@ import sys
 import json
 '''載入api金鑰'''
 from microsofttranslator import Translator
-with open('config.json', 'r') as f: 
+with open('./config.json', 'r') as f: 
     account = json.load(f, encoding="utf-8")
 translator = Translator(account["client_id"], account["password"])
 '''輸出翻譯結果'''
