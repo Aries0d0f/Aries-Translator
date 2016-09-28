@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+# coding=UTF-8
+'''嵌入api'''
+import os
+import sys
+
+from microsofttranslator import Translator
+client_id = str('aries0d0f_Translate')
+password = str('c5FWyOcqRImhBOxWi+M4VWEDn8MInD1re9yYvf8Ao2Q=')
+translator = Translator(client_id, password)
+
+'''輸出翻譯結果'''
+def translate(text, lang):
+    awnser = 'Translated: ' + translator.translate(text, lang)
+    print(awnser)
+'''增加command-line支援'''
+if __name__ == "__main__":
+    if sys.argv[1] == '-h' or len(sys.argv) < 2:
+        print('Usage: translate <text> <language>')
+        sys.exit()
+    else:
+        translate(sys.argv[1].decode('utf-8'), sys.argv[2])
