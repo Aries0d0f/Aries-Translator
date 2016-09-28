@@ -6,6 +6,7 @@
 # Usage:
    
 * This project is basic on python2.7, be sure that you have installed it.
+* This project is basic on microsoft_translator api, got your own client-id and password from microsoft for free first before start.
    
 * First you must to clone or download this repository.
   Open your terminal and type:
@@ -13,8 +14,16 @@
 git clone https://github.com/Aries0d0f/Aries-Translator.git
 ```
 * Second
+edit 'config.json' and past your own id and password.
+```json
+{
+    "client_id" : "your_client_id",
+    "password" : "your_password"
+}
+```
+* Third, type the following things in your terminal:
 ```sh
-python main.py
+python ./main.py <input> <language>
 ```
 # Install
 * Copy 'main.py' and rename it as translate
